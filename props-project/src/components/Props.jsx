@@ -1,9 +1,28 @@
-import React from 'react'
+import React from 'react';
 import {useState} from 'react';
 
 const Props = ({product, price="10", src}) => {
 
     const [cost , setCost] = useState('');
+    const [heart , setHeart] = useState('heart-empty.png');
+    // const [product1, setProduct1] = useState('');
+    // const [product2, setProduct2] = useState('');
+    // const [product3, setProduct3] = useState('');
+
+    const toggleLike = () => {
+
+        if(heart==='heart-filled.png'){
+            setHeart('heart-empty.png')
+        }
+        else{
+            if(heart==='heart-empty.png'){
+                setHeart('heart-filled.png')
+            }
+            else{
+                setHeart('heart-empty.png')
+            }
+        }
+    };
 
   return (
     <>
@@ -68,9 +87,10 @@ const Props = ({product, price="10", src}) => {
         </button>
       </div>
       <button className="flex-none flex items-center justify-center w-9 h-9 rounded-full text-violet-600 bg-violet-50" type="button" aria-label="Like">
-        <svg width="20" height="20" fill="currentColor" aria-hidden="true">
+        {/* <svg width="20" height="20" fill="currentColor" aria-hidden="true">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
-        </svg>
+        </svg> */}
+        <img src={heart} alt="" onClick={toggleLike}/>
       </button>
     </div>
     <p className="text-sm text-slate-500">
