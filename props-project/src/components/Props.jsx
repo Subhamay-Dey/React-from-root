@@ -33,13 +33,13 @@ const Props = ({product, price="10", src, stock}) => {
   </div>
   <form className="flex-auto p-6">
     <div className="flex flex-wrap">
-      <h1 className="flex-auto font-medium text-slate-900">
+      <h1 className="flex-auto font-semibold text-xl text-slate-900">
         {product}
       </h1>
       <div className="w-full flex-none mt-2 order-1 text-3xl font-bold text-violet-600">
         ${price=cost}
       </div>
-      <div className="text-sm font-medium text-slate-400">
+      <div className="font-medium text-lg text-slate-400">
         {stock}
       </div>
     </div>
