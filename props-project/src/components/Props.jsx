@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState} from 'react';
 
-const Props = ({product, price="10", src}) => {
+const Props = ({product, price="10", src, stock}) => {
 
     const [cost , setCost] = useState('');
     const [heart , setHeart] = useState('heart-empty.png');
@@ -26,7 +26,7 @@ const Props = ({product, price="10", src}) => {
 
   return (
     <>
-    <div className='w-full h-screen pt-16 px-4 justify-center items-center'>
+    <div className='px-12 justify-center items-center'>
     <div className="flex font-sans pt-16 justify-center">
   <div className="flex-none w-56 relative">
     <img src={src} alt="" className="absolute inset-0 w-full h-full object-cover rounded-lg" loading="lazy" />
@@ -40,7 +40,7 @@ const Props = ({product, price="10", src}) => {
         ${price=cost}
       </div>
       <div className="text-sm font-medium text-slate-400">
-        In stock
+        {stock}
       </div>
     </div>
     <div className="flex items-baseline mt-4 mb-6 pb-6 border-b border-slate-200">
