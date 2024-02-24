@@ -16,7 +16,7 @@ const ThemeChangerProvider = ({children}) => {
     }
 
   return (
-    <ThemeChanger.Provider value={{theme, changeTheme, themetext, btnchange}}>
+    <ThemeChanger.Provider value={{theme, setTheme, changeTheme, themetext, setThemetext, btnchange, setBtnchange}}>
       {children}
     </ThemeChanger.Provider>
   )
