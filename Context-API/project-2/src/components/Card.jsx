@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import ThemeChanger from '../context/context'
 
 const Card = () => {
+
+    const {theme} = useContext(ThemeChanger)
+
   return (
     <>
         <div className='w-full h-screen flex justify-center items-center'>
