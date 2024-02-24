@@ -1,24 +1,30 @@
 import React from 'react'
-import ThemeChanger from './context'
+import ThemeContext from './ThemeContext'
 
 const ThemeChangerProvider = ({children}) => {
     const [theme, setTheme] =  React.useState('gray')
     const [themetext, setThemetext] = React.useState('black')
-    const [btnchange, setBtnchange] = React.useState('black')
 
     const changeTheme = () => {
-        if(theme === 'black'){
-            setThemetext("white")
+        if(theme === 'gray'){
+            setTheme("black")
         }
         else{
-            setThemetext( "black" )
+            setTheme( 'gray' )
+        }
+
+        if(themetext === 'black'){
+            setThemetext('white')
+        }
+        else{
+            setThemetext( 'black' )
         }
     }
 
   return (
-    <ThemeChanger.Provider value={{theme, setTheme, changeTheme, themetext, setThemetext, btnchange, setBtnchange}}>
+    <ThemeContext.Provider value={{theme, changeTheme, themetext}}>
       {children}
-    </ThemeChanger.Provider>
+    </ThemeContext.Provider>
   )
 }
 
