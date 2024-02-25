@@ -14,7 +14,7 @@ function App() {
   }
 
   //another way to update todo
-  
+
   // prev.map((eachVal) => {
   //   if(eachVal.id === id){
   //     todo
@@ -23,6 +23,10 @@ function App() {
   //     prevTodo
   //   }
   // })
+
+  const deleteTodo = (id) => {
+    setTodos((prev) => prev.filter((todo) => todo.id !== id))
+  }
 
   return (
     <TodoProvider value={{todos, addTodo, updateTodo,deleteTodo, toggleComplete}}>
