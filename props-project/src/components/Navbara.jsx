@@ -2,14 +2,10 @@ import React from 'react';
 import { FaRegHeart } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaRegUser } from "react-icons/fa";
-// import{ useNavigate } from "react-router-dom";
-// import { useAuth0 } from "@auth0/auth0-react";
 import { IoSearchOutline } from "react-icons/io5";
 import Props from './Props';
 
 const Navbara = () => {
-
-    // const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
     // const navigate = useNavigate();
 
     // const links = [
@@ -116,7 +112,6 @@ const Navbara = () => {
     </button>):(<button className='bg-green-400 p-2 ml-12 h-3/5 w-[100px] rounded-xl text-white' onClick={() => loginWithRedirect()}>Log In</button>)} */}
         </div>
     </nav>
-
     <Props/>
     </>
   )

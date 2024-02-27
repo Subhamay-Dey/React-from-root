@@ -4,6 +4,8 @@ import img2 from "../public/child2.webp";
 import img3 from "../public/child3.webp";
 import img4 from "../public/child4.webp";
 import Navbara from "./components/Navbara";
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
@@ -14,7 +16,15 @@ function App() {
       <Props product='Suit'      src={img2} stock='out of stock'/>
       <Props product='Casual'    src={img3} stock='in stock'/>
       <Props product='Traditional'src={img4} stock='in stock'/>
+      <Props product='Traditional'src={img4} stock='out of stock'/>
+      <Props product='Traditional'src={img4} stock='in stock'/>
     </div>
+    {/* <BrowserRouter>
+      <Routes>
+        <Route path='/' element= {<App/>}></Route>
+        <Route path></Route> 
+      </Routes>
+    </BrowserRouter> */}
     </>
   )
 }
