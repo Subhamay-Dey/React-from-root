@@ -19,12 +19,12 @@ function App() {
       <Props product='Traditional'src={img4} stock='out of stock'/>
       <Props product='Traditional'src={img4} stock='in stock'/>
     </div>
-    {/* <BrowserRouter>
+    <BrowserRouter>
       <Routes>
         <Route path='/' element= {<App/>}></Route>
         <Route path></Route> 
       </Routes>
-    </BrowserRouter> */}
+    </BrowserRouter>
     </>
   )
 }
