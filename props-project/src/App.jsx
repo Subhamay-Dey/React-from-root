@@ -3,10 +3,12 @@ import img1 from "../public/child1.jpg";
 import img2 from "../public/child2.webp";
 import img3 from "../public/child3.webp";
 import img4 from "../public/child4.webp";
+import Navbara from "./components/Navbara";
 
 function App() {
   return (
     <>
+    <Navbara/>
     <div className="grid grid-cols-2 p-10 gap-8">
       <Props product='Kids wear' src={img1} stock='in stock'/>
       <Props product='Suit'      src={img2} stock='out of stock'/>
