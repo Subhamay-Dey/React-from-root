@@ -6,35 +6,35 @@ import { IoSearchOutline } from "react-icons/io5";
 import Props from './Props';
 
 const Navbara = () => {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
-    // const links = [
-    //     {
-    //         index: 1,
-    //         name: 'Home',
-    //         route: "/",
-    //     },
-    //     {
-    //         index: 2,
-    //         name: 'Shop',
-    //         route: "/shop",
-    //     },
-    //     {
-    //         index: 3,
-    //         name: 'Profile',
-    //         route: "/profile",
-    //     },
-    //     {
-    //         index: 4,
-    //         name: 'Contact us',
-    //         route: "/contact",
-    //     },
-    //     {
-    //         index: 5,
-    //         name: 'Ur Cart',
-    //         route: "/cart",
-    //     },
-    // ]
+    const links = [
+        {
+            index: 1,
+            name: 'Home',
+            route: "/",
+        },
+        {
+            index: 2,
+            name: 'Shop',
+            route: "/shop",
+        },
+        {
+            index: 3,
+            name: 'Profile',
+            route: "/profile",
+        },
+        {
+            index: 4,
+            name: 'Contact us',
+            route: "/contact",
+        },
+        {
+            index: 5,
+            name: 'Ur Cart',
+            route: "/cart",
+        },
+    ]
 
   return (
     <>
