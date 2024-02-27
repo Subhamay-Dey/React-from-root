@@ -18,8 +18,8 @@ function App() {
 
   //another way to update todo
 
-  // prev.map((eachVal) => {
-  //   if(eachVal.id === id){
+  // prev.map((prevTodo) => {
+  //   if(prevTodo.id === id){
   //     todo
   //   }
   //   else{
@@ -49,10 +49,10 @@ function App() {
 
   return (
     <TodoProvider value={{todos, addTodo, updateTodo,deleteTodo, toggleComplete}}>
- 
-      <div className="bg-[#172842] min-h-screen py-8">
+      <div className='h-screen w-full flex justify-center items-center'>
+      <div className="bg-gradient-to-tr from-sky-300 via-sky-400 to-blue-500 h-[80%] w-[50%] pt-4 rounded-lg shadow-2xl">
                 <div className="w-full max-w-2xl mx-auto shadow-md rounded-lg px-4 py-3 text-white">
-                    <h1 className="text-2xl font-bold text-center mb-8 mt-2">Manage Your Todos</h1>
+                    <h1 className="text-3xl font-bold text-center mb-8 mt-4">Subho's Todo List</h1>
                     <div className="mb-4">
                         {<TodoForm/>}
                     </div>
@@ -65,6 +65,7 @@ function App() {
                     </div>
                 </div>
             </div>
+      </div>
     </TodoProvider>
   )
 }
