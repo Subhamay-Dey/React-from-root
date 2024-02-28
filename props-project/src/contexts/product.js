@@ -3,5 +3,9 @@ import { useState } from "react";
 
 export const productContext= createContext();
 
-export const productProvider = productContext.Provider;
+export const productProvider = (children)=> {
+    <productContext>
+        {children}
+    </productContext>
+};
 
