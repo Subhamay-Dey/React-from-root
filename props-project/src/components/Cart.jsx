@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Props from './Props';
 
 const Cart = () => {
+
   return (
     <>
-      <h1>Here's Your Cart</h1>
+      <div >
+        {items.map(...items, product)}
+      </div>
     </>
   )
 }
