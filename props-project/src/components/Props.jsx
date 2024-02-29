@@ -1,8 +1,13 @@
 import React, {useState, useContext} from 'react';
 import arr from "../components/product";
 import UseProduct from '../contexts/UseProduct';
+import { useNavigate } from 'react-router-dom';
 
 const Props = () => {
+
+  let  navigate = useNavigate();
+
+  const one = "/CartPage";
 
   const {cart, handleClick} = useContext(UseProduct)
 
