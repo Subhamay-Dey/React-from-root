@@ -8,7 +8,7 @@ const PProvider = ({children}) => {
     const handleClick = (item) => {
         setCart(prevCart => {
             const updatedCart = [...prevCart, item]
-            console.log("carr:" , updatedCart);
+            console.log("cart:" , updatedCart);
             return updatedCart;
         })
     }

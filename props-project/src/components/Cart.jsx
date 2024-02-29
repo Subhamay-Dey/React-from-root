@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react';
 import Props from './Props';
 import arr from './product';
+import UseProduct from '../contexts/UseProduct';
 
 const Cart = () => {
-  // const cartItem = useCart();
+  
   return (
     <>
       
