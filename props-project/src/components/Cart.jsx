@@ -9,6 +9,11 @@ const Cart = () => {
 
   const totalPrice = cart.reduce((accumulator, item) => accumulator + item.price, 0);
 
+  const removeItem = (itemId) => {
+    const afterRemovingItem = cart.filter(item => item.id !== itemId);
+    setCart(afterRemovingItem);
+  }
+
   if(cart.length === 0)
     {
       return (
