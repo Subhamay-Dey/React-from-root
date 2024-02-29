@@ -1,13 +1,13 @@
 import Navbara from "./components/Navbara";
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import { BrowserRouter } from 'react-router-dom';
+import Cart from "./components/Cart";
+import PProvider from "./contexts/PProvider";
 
 function App() {
   return (
-    <>
-    <Navbara/>
-    <Cart/>
-    </>
+    <PProvider>
+      <Navbara/>
+      <Cart/>
+    </PProvider>
   )
 }
 

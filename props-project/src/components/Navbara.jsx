@@ -53,7 +53,7 @@ const Navbara = () => {
                 </span>
                 <div className='md:w-[576px] md:h-[50px] flex'>
 
-                <input  type="text" className="w-full border border-[#fd3d57] border-r-0 pl-12 py-3 pr-3 rounded-l-md focus:outline-none" placeholder="search" />
+                <input  type="text" className="px-[500px] border border-[#fd3d57] border-r-0 pl-12 py-3 pr-3 rounded-l-md focus:outline-none" placeholder="search" />
                 <button className="bg-[#fd3d57] border border-[#fd3d57] text-white px-8 rounded-r-md hover:bg-transparent hover:text-[#fd3d57] transition">Search</button>
                 </div>
              </div>

@@ -1,10 +1,11 @@
-import React from 'react';
-import {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import arr from "../components/product";
+import UseProduct from '../contexts/UseProduct';
 
 const Props = () => {
 
-     const [cart, setCart] = useState('');
+  const {cart, handleClick} = useContext(UseProduct)
+
     const [cost , setCost] = useState(0);
     const [heart , setHeart] = useState('heart-empty.png');
 
@@ -23,26 +24,26 @@ const Props = () => {
         }
     };
 
-    const handleClick = (product) => {
-      setCart=((items)=> [...items, product])
-    }
+    // const handleClick = (product) => {
+    //   // setCart=((items)=> [...items, product])
+    // }
 
   return (
     <>
       <div>
-          {arr.map((items) => (
+          {arr.map((item) => (
             <div className="px-12 justify-center items-center">
             <div className="flex font-sans pt-16 justify-center">
           <div className="flex-none w-56 relative">
-            <img src={items.src} alt="" className="absolute inset-0 w-full h-full object-cover rounded-lg"/>
+            <img src={item.src} alt="" className="absolute inset-0 w-full h-full object-cover rounded-lg"/>
           </div>
-          <form className="flex-auto p-6">
+          <form className="flex-auto p-6" key={item.id}>
             <div className="flex flex-wrap">
               <h1 className="flex-auto font-semibold text-xl text-slate-900">
                 {/* {product} */}
               </h1>
               <div className="w-full flex-none  order-1 text-3xl font-bold text-violet-600">
-                {items.price}
+                {`₹ ${item.price}`}
               </div>
               <div className="font-medium text-lg text-slate-400">
                 {/* {stock} */}
@@ -52,31 +53,31 @@ const Props = () => {
               <div className="space-x-2 flex text-sm font-bold">
                 <label>
                   <input className="sr-only peer" name="size" type="radio" value="xs"/>
-                  <div className="w-9 h-9 rounded-full flex items-center justify-center text-violet-400 peer-checked:bg-violet-600 peer-checked:text-white" onClick={() => setCost(items.price=12)}>
+                  <div className="w-9 h-9 rounded-full flex items-center justify-center text-violet-400 peer-checked:bg-violet-600 peer-checked:text-white" onClick={() => setCost(item.price=12)}>
                     XS
                   </div>
                 </label>
                 <label>
                   <input className="sr-only peer" name="size" type="radio" value="s" />
-                  <div className="w-9 h-9 rounded-full flex items-center justify-center text-violet-400 peer-checked:bg-violet-600 peer-checked:text-white" onClick={() => setCost(items.price=16)}>
+                  <div className="w-9 h-9 rounded-full flex items-center justify-center text-violet-400 peer-checked:bg-violet-600 peer-checked:text-white" onClick={() => setCost()}>
                     S
                   </div>
                 </label>
                 <label>
                   <input className="sr-only peer" name="size" type="radio" value="m"/>
-                  <div className="w-9 h-9 rounded-full flex items-center justify-center text-violet-400 peer-checked:bg-violet-600 peer-checked:text-white" onClick={() => setCost(items.price=20)}>
+                  <div className="w-9 h-9 rounded-full flex items-center justify-center text-violet-400 peer-checked:bg-violet-600 peer-checked:text-white" onClick={() => setCost()}>
                     M
                   </div>
                 </label>
                 <label>
                   <input className="sr-only peer" name="size" type="radio" value="l"/>
-                  <div className="w-9 h-9 rounded-full flex items-center justify-center text-violet-400 peer-checked:bg-violet-600 peer-checked:text-white" onClick={() => setCost(items.price=25)}>
+                  <div className="w-9 h-9 rounded-full flex items-center justify-center text-violet-400 peer-checked:bg-violet-600 peer-checked:text-white" onClick={() => setCost()}>
                     L
                   </div>
                 </label>
                 <label>
                   <input className="sr-only peer" name="size" type="radio" value="xl" />
-                  <div className="w-9 h-9 rounded-full flex items-center justify-center text-violet-400 peer-checked:bg-violet-600 peer-checked:text-white" onClick={() => setCost(items.price=30)}>
+                  <div className="w-9 h-9 rounded-full flex items-center justify-center text-violet-400 peer-checked:bg-violet-600 peer-checked:text-white" onClick={() => setCost()}>
                     XL
                   </div>
                 </label>
@@ -87,7 +88,8 @@ const Props = () => {
                 <button className="h-10 px-6 font-semibold rounded-full bg-violet-600 text-white" type="submit">
                   Buy now
                 </button>
-                <button className="h-10 px-6 font-semibold rounded-full border border-slate-200 text-slate-900" type="button" onClick={()=> (handleClick)}>
+                <button className="h-10 px-6 font-semibold rounded-full border border-slate-200 text-slate-900" type="button" 
+                onClick={() => handleClick(item)}>
                   Add to bag
                 </button>
               </div>

@@ -6,18 +6,22 @@
  const arr = [
     {
         id:1,
+        price:200,
         src: child1
     },
     {
         id:2,
+        price:300,
         src: child2,
     },
     {
         id:3,
+        price:400,
         src: child3,
     },
     {
         id:4,
+        price:500,
         src:  child4,
     }
 ]

@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
 import Props from './Props';
-import { useCart } from '../contexts/product';
+import arr from './product';
 
 const Cart = () => {
-  const cartItem = useCart();
+  // const cartItem = useCart();
   return (
     <>
-      <div >
-        {items.map(...items, product)}
-      </div>
+      
     </>
   )
 }
