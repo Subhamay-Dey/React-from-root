@@ -4,6 +4,8 @@ import arr from './product';
 import UseProduct from '../contexts/UseProduct';
 
 const Cart = () => {
+
+  
   
   return (
     <>
@@ -12,4 +14,4 @@ const Cart = () => {
   )
 }
 
-export default Cart
+export default Cart;
