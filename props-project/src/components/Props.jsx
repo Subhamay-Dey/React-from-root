@@ -5,9 +5,9 @@ import { useNavigate } from 'react-router-dom';
 
 const Props = () => {
 
-  let  navigate = useNavigate();
+  const navigate = useNavigate();
 
-  const one = "/CartPage";
+  const CartRoute = "/CartPage";
 
   const {cart, handleClick} = useContext(UseProduct)
 
