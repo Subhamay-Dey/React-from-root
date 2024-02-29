@@ -9,6 +9,15 @@ const Cart = () => {
 
   const totalPrice = cart.reduce((accumulator, item) => accumulator + item.price, 0);
 
+  if(cart.length === 0)
+    {
+      return (
+        <div className='bg-slate-700 h-screen w-full flex justify-center items-center flex-wrap gap-5 p-6'>
+          <div className='h-[120px] w-[80%] text-xl text-center px-6 py-4 bg-gray-400 rounded-xl flex justify-center items-center'><h1>Your cart is empty!</h1></div>
+        </div>
+      )
+    }
+
   return (
     <>
       <div className="container mx-auto py-8">
