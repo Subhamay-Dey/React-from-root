@@ -14,7 +14,7 @@ const PProvider = ({children}) => {
     }
 
   return (
-    <UseProduct.Provider value={{cart, handleClick}}>
+    <UseProduct.Provider value={{cart, setCart, handleClick}}>
         {children}
     </UseProduct.Provider>
   )
